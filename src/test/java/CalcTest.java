@@ -59,6 +59,19 @@ public class CalcTest {
         browser.findElement(By.name("wg")).sendKeys("10");
         browser.findElement(By.name("cc")).click();
         browser.switchTo().alert().accept();
+
+        browser.quit();
+    }
+
+    @Test
+    public void alertTest5() {
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        WebDriver browser = new ChromeDriver();
+        browser.get("https://healthunify.com/bmicalculator/");
+        browser.findElement(By.name("ht")).sendKeys("32");
+        browser.findElement(By.name("cc")).click();
+        browser.switchTo().alert().accept();
+
         browser.quit();
     }
 }
